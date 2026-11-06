@@ -1,0 +1,23 @@
+# Reglas de encabezados HTTP en el Edge de Cloudflare Pages
+
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  X-XSS-Protection: 1; mode=block
+
+/style.css
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/script.js
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/favicon.svg
+  Cache-Control: public, max-age=2592000, immutable
+
+/cv-juan-jose-marco-ortega-completo.pdf
+  Cache-Control: public, max-age=86400
+
+/cv-juan-jose-marco-ortega-resumido.pdf
+  Cache-Control: public, max-age=86400

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://marcoortegajuanjose.pages.dev/sitemap.xml
+
