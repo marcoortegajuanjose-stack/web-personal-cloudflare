@@ -463,6 +463,57 @@ button, input, textarea {
   z-index: 1;
 }
 
+/* Cabecera del Hero con Foto de Perfil Integrada */
+.hero-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 6px;
+}
+
+.hero-title-area {
+  flex: 1;
+}
+
+.header-photo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.profile-photo {
+  width: 124px;
+  height: 155px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  border: 3px solid var(--accent-primary);
+  box-shadow: 0 10px 28px -6px var(--accent-glow), 0 0 24px -4px var(--accent-glow);
+  background: var(--bg-card);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.profile-photo:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 16px 36px -4px var(--accent-glow), 0 0 32px -2px var(--accent-glow);
+}
+
+.header-photo::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #10b981;
+  border: 2.5px solid var(--bg-primary);
+  box-shadow: 0 0 10px #10b981;
+}
+
 .status-pill {
   display: inline-flex;
   align-items: center;
@@ -1693,6 +1744,25 @@ button, input, textarea {
     padding: 40px 0 60px 0;
   }
 
+  .hero-header-top {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .profile-photo {
+    width: 96px;
+    height: 120px;
+    border-width: 2.5px;
+  }
+
+  .header-photo::after {
+    bottom: 4px;
+    right: 6px;
+    width: 14px;
+    height: 14px;
+  }
+
   .skills-grid {
     grid-template-columns: 1fr;
   }
@@ -1734,6 +1804,41 @@ button, input, textarea {
   }
 
   .footer-links {
+    justify-content: center;
+  }
+}
+
+/* Pantallas Pequeñas (<= 480px) */
+@media (max-width: 480px) {
+  .hero-header-top {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  .status-pill {
+    font-size: 0.76rem;
+    padding: 6px 14px;
+  }
+
+  .hero-name {
+    font-size: 2.2rem;
+  }
+
+  .hero-tags {
+    justify-content: center;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .social-icons-group {
     justify-content: center;
   }
 }

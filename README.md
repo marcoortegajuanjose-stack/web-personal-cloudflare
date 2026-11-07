@@ -28,6 +28,8 @@ web-personal-cloudflare/
 ├── script.js                              # Interactividad (tema, menú móvil, filtros, portapapeles)
 ├── cv-juan-jose-marco-ortega-completo.pdf # Curriculum Vitae versión completa y detallada
 ├── cv-juan-jose-marco-ortega-resumido.pdf # Curriculum Vitae versión ejecutiva de 1 página
+├── foto_perfil_oval.png                   # Fotografía de perfil ovalada (Hero & CV)
+├── foto_perfil.jpg                        # Fotografía de perfil para previsualización social (Open Graph)
 ├── favicon.svg                            # Icono vectorial de la pestaña del navegador
 ├── _headers                               # Cabeceras de seguridad y caché en Cloudflare Edge
 ├── 404.html                               # Página de error 404 con diseño integrado
